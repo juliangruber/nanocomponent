@@ -7,6 +7,7 @@ var choo = require('choo')
 
 var Leaflet = require('./leaflet.js')
 
+css('tachyons')
 css('./leaflet.css')
 
 var leaflet = Leaflet()
@@ -20,7 +21,7 @@ app.mount('body')
 var debounce = microbounce(128)
 function mainView (state, emit) {
   return html`
-    <body>
+    <body class="sans-serif">
       <header>
         <h1>${state.title}</h1>
       </header>
